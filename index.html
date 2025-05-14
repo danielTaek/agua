@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Importância da Água</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      line-height: 1.6;
+      background: #e0f7fa;
+      color: #333;
+      scroll-behavior: smooth;
+    }
+
+    header {
+      background: #0077b6;
+      color: white;
+      padding: 2rem 1rem;
+      text-align: center;
+    }
+
+    header h1 {
+      font-size: 2.5rem;
+      animation: fadeIn 1.5s ease-in-out;
+    }
+
+    header p {
+      font-size: 1.2rem;
+      margin-top: 0.5rem;
+      animation: fadeIn 2s ease-in-out;
+    }
+
+    nav ul {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      list-style: none;
+      margin-top: 1rem;
+    }
+
+    nav ul li {
+      margin: 0.5rem;
+    }
+
+    nav ul li a {
+      text-decoration: none;
+      color: white;
+      background: #00b4d8;
+      padding: 0.5rem 1rem;
+      border-radius: 8px;
+      transition: background 0.3s ease;
+    }
+
+    nav ul li a:hover {
+      background: #48cae4;
+    }
+
+    main {
+      padding: 2rem 1rem;
+      max-width: 900px;
+      margin: auto;
+    }
+
+    section {
+      margin-bottom: 2.5rem;
+      background: white;
+      padding: 1.5rem;
+      border-radius: 10px;
+      box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+      animation: fadeInUp 1s ease forwards;
+      opacity: 0;
+    }
+
+    section h2 {
+      color: #0077b6;
+      margin-bottom: 1rem;
+    }
+
+    section img {
+      width: 100%;
+      border-radius: 10px;
+      margin-bottom: 1rem;
+    }
+
+    #topo-btn {
+      position: fixed;
+      bottom: 20px;
+      right: 20px;
+      padding: 0.8rem;
+      background: #00b4d8;
+      color: white;
+      border: none;
+      border-radius: 50%;
+      font-size: 1.2rem;
+      cursor: pointer;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.3);
+      display: none;
+      transition: background 0.3s;
+    }
+
+    #topo-btn:hover {
+      background: #0077b6;
+    }
+
+    @keyframes fadeInUp {
+      from {
+        opacity: 0;
+        transform: translateY(40px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    @keyframes fadeIn {
+      from {
+        opacity: 0;
+      }
+      to {
+        opacity: 1;
+      }
+    }
+
+    @media (max-width: 600px) {
+      nav ul {
+        flex-direction: column;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>Importância da Água</h1>
+    <p>Entenda como a água é fundamental para a vida e o equilíbrio do planeta.</p>
+    <nav>
+      <ul>
+        <li><a href="#introducao">Introdução</a></li>
+        <li><a href="#importancia">Importância</a></li>
+        <li><a href="#ciclo">Ciclo da Água</a></li>
+        <li><a href="#poluicao">Poluição</a></li>
+        <li><a href="#agua-potavel">Água Potável</a></li>
+        <li><a href="#conclusao">Conclusão</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <section id="introducao">
+      <h2>1. Introdução</h2>
+      <img src="https://images.unsplash.com/photo-1507525428034-b723cf961d3e" alt="Imagem de oceano">
+      <p>A água é um dos recursos naturais mais importantes e indispensáveis à vida na Terra...</p>
+    </section>
+
+    <section id="importancia">
+      <h2>2. A Importância da Água para os Seres Vivos</h2>
+      <img src="Auaaaaaaa.jpg" alt="Natureza e vida com água">
+      <p>A água é fundamental para todos os seres vivos, desde os humanos até as plantas e animais...</p>
+    </section>
+
+    <section id="ciclo">
+      <h2>3. O Ciclo da Água</h2>
+      <img src="ciclo_da_agua.png" alt="Imagem do ciclo da água">
+      <p>O ciclo da água é um processo natural e contínuo que permite a renovação constante da água disponível no planeta...</p>
+    </section>
+
+    <section id="poluicao">
+      <h2>4. Poluição da Água</h2>
+      <img src="poluicao.jpg" alt="Água poluída">
+      <p>A poluição da água é um dos maiores desafios ambientais enfrentados pela humanidade...</p>
+    </section>
+
+    <section id="agua-potavel">
+      <h2>5. Água Potável e Não Potável</h2>
+      <img src="potavel_e_nao_potal.jpg" alt="Copos de água potável">
+      <p>A água potável é tratada e segura para consumo, enquanto a água não potável pode conter contaminantes perigosos...</p>
+    </section>
+
+    <section id="conclusao">
+      <h2>6. Conclusão</h2>
+      <img src="agua.jpg" alt="Planeta Terra com água">
+      <p>A água é essencial para a vida, e sem ela, a sobrevivência no planeta não seria possível...</p>
+    </section>
+  </main>
+
+  <button id="topo-btn" onclick="voltarAoTopo()">↑</button>
+
+  <script>
+    const topoBtn = document.getElementById("topo-btn");
+
+    window.onscroll = function () {
+      if (document.body.scrollTop > 300 || document.documentElement.scrollTop > 300) {
+        topoBtn.style.display = "block";
+      } else {
+        topoBtn.style.display = "none";
+      }
+    };
+
+    function voltarAoTopo() {
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    }
+
+    // Animação de seção ao aparecer
+    const sections = document.querySelectorAll("section");
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.style.opacity = 1;
+        }
+      });
+    }, { threshold: 0.2 });
+
+    sections.forEach(section => observer.observe(section));
+  </script>
+
+</body>
+</html>
